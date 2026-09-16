@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360">
+  <rect width="100%" height="100%" fill="#fafafa"/>
+  <text x="320.0" y="28" text-anchor="middle" font-size="16" font-family="Segoe UI,sans-serif">Mem v3: instant CF gap vs force_w (seed1)</text>
+  <line x1="50" y1="310" x2="590" y2="310" stroke="#333"/>
+  <line x1="50" y1="50" x2="50" y2="310" stroke="#333"/>
+  <text x="320.0" y="352" text-anchor="middle" font-size="13">force_w (memory mix)</text>
+  <text x="16" y="180.0" transform="rotate(-90 16,180.0)" text-anchor="middle" font-size="13">instant_cf_gap (controllability↓)</text>
+  <polyline fill="none" stroke="#1d4ed8" stroke-width="2" points="50.0,83.9 185.0,230.6 320.0,240.2 455.0,245.4 590.0,310.0"/>
+  <circle cx="50.0" cy="83.9" r="5" fill="#1d4ed8"/>
+<circle cx="185.0" cy="230.6" r="5" fill="#1d4ed8"/>
+<circle cx="320.0" cy="240.2" r="5" fill="#1d4ed8"/>
+<circle cx="455.0" cy="245.4" r="5" fill="#1d4ed8"/>
+<circle cx="590.0" cy="310.0" r="5" fill="#1d4ed8"/>
+  <text x="50.0" y="328" text-anchor="middle" font-size="12">0.0</text>
+<text x="185.0" y="328" text-anchor="middle" font-size="12">0.25</text>
+<text x="320.0" y="328" text-anchor="middle" font-size="12">0.5</text>
+<text x="455.0" y="328" text-anchor="middle" font-size="12">0.75</text>
+<text x="590.0" y="328" text-anchor="middle" font-size="12">1.0</text>
+  <circle cx="503.4" cy="279.5" r="7" fill="none" stroke="#b45309" stroke-width="2"/><text x="503.4" y="267.5" text-anchor="middle" font-size="11" fill="#b45309">learn_gate</text>
+  <text x="590" y="60" text-anchor="end" font-size="11" fill="#555">monotonic: True</text>
+</svg>

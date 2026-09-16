@@ -1,0 +1,36 @@
+{
+  "force_w_0.0": {
+    "instant_cf_gap": 0.0011527929455041885,
+    "fact_err": 0.011101248674094677,
+    "mean_w": 0.0
+  },
+  "force_w_0.25": {
+    "instant_cf_gap": 0.0004047797410748899,
+    "fact_err": 0.010406216606497765,
+    "mean_w": 0.25
+  },
+  "force_w_0.5": {
+    "instant_cf_gap": 0.00035608408506959677,
+    "fact_err": 0.01030649896711111,
+    "mean_w": 0.5
+  },
+  "force_w_0.75": {
+    "instant_cf_gap": 0.0003295913338661194,
+    "fact_err": 0.010116402059793472,
+    "mean_w": 0.75
+  },
+  "force_w_1.0": {
+    "instant_cf_gap": 0.0,
+    "fact_err": 0.010079588741064072,
+    "mean_w": 1.0
+  },
+  "learn_gate": {
+    "instant_cf_gap": 0.00015560448809992522,
+    "fact_err": 0.010160830803215504,
+    "mean_w": 0.8395830988883972
+  },
+  "meta": {
+    "seed": 1,
+    "monotonic_decreasing_instant": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "summary": {
+    "mean_caf_film_highexc": 0.384314032721834,
+    "mean_caf_ignore": 0.0,
+    "mean_pv_demo": 0.03657131269574165,
+    "mean_pv_highexc_train": 0.033276934176683426,
+    "pass_caf_separates": true,
+    "pass_excitation_pv": false,
+    "seconds": 37.201120376586914,
+    "device": "cuda:0",
+    "seeds": [0, 1, 2],
+    "note": "GPU run on 25mhn; excitation PV mean improves slightly but fails strict 0.9x threshold; seed1 passes alone"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "per_seed": {
+    "seed0": {
+      "film_train_demo": {
+        "fact_err": 0.02204621396958828,
+        "self_cf_gap": 0.025984449312090874,
+        "pred_validity_cf": 0.022147875279188156,
+        "caf": 1.173224846730981
+      },
+      "film_train_high_exc": {
+        "fact_err": 0.013345041312277317,
+        "self_cf_gap": 0.012616588734090328,
+        "pred_validity_cf": 0.03326335921883583,
+        "caf": 0.379293770606557
+      },
+      "ignore": {
+        "fact_err": 0.016226865351200104,
+        "self_cf_gap": 0.0,
+        "pred_validity_cf": 0.03342701867222786,
+        "caf": 0.0
+      }
+    },
+    "seed1": {
+      "film_train_demo": {
+        "fact_err": 0.021763404831290245,
+        "self_cf_gap": 0.03141298517584801,
+        "pred_validity_cf": 0.021638784557580948,
+        "caf": 1.451697556084184
+      },
+      "film_train_high_exc": {
+        "fact_err": 0.012961747124791145,
+        "self_cf_gap": 0.012890311889350414,
+        "pred_validity_cf": 0.030272264033555984,
+        "caf": 0.42581247365367586
+      },
+      "ignore": {
+        "fact_err": 0.017474012449383736,
+        "self_cf_gap": 0.0,
+        "pred_validity_cf": 0.0375414602458477,
+        "caf": 0.0
+      }
+    }
+  },
+  "summary": {
+    "mean_caf_film_highexc": 0.4025531221301164,
+    "mean_caf_ignore": 0.0,
+    "mean_pv_demo": 0.021893329918384552,
+    "mean_pv_highexc_train": 0.03176781162619591,
+    "pass_caf_separates": true,
+    "pass_excitation_pv": false,
+    "seconds": 268.7517001628876,
+    "device": "cpu",
+    "seeds": [
+      0,
+      1
+    ]
+  }
+}

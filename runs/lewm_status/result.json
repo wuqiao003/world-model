@@ -1,0 +1,14 @@
+{
+  "dirs": {
+    "\\mnt\\group\\jxdong\\wm_exp\\ckpts\\lewm_pusht": {
+      "exists": false,
+      "files": []
+    },
+    "ckpts\\lewm_pusht": {
+      "exists": false,
+      "files": []
+    }
+  },
+  "ready_for_adapter": false,
+  "next": "Download YuhaiW/lewm-pusht-fr3-v2 into ckpts/lewm_pusht then wire torch.load"
+}

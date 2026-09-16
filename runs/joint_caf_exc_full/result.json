@@ -1,0 +1,37 @@
+{
+  "per_seed": {
+    "seed0": {
+      "film_train_demo": {
+        "fact_err": 0.02052886411547661,
+        "self_cf_gap": 0.053609296679496765,
+        "pred_validity_cf": 0.03588389232754707,
+        "caf": 1.493965070748239
+      },
+      "film_train_high_exc": {
+        "fact_err": 0.012664899230003357,
+        "self_cf_gap": 0.01319428626447916,
+        "pred_validity_cf": 0.032666563987731934,
+        "caf": 0.4039078683131671
+      },
+      "ignore": {
+        "fact_err": 0.016462163999676704,
+        "self_cf_gap": 0.0,
+        "pred_validity_cf": 0.03556511551141739,
+        "caf": 0.0
+      }
+    }
+  },
+  "summary": {
+    "mean_caf_film_highexc": 0.4039078683131671,
+    "mean_caf_ignore": 0.0,
+    "mean_pv_demo": 0.03588389232754707,
+    "mean_pv_highexc_train": 0.032666563987731934,
+    "pass_caf_separates": true,
+    "pass_excitation_pv": false,
+    "seconds": 252.48302364349365,
+    "device": "cpu",
+    "seeds": [
+      0
+    ]
+  }
+}

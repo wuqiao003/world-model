@@ -1,0 +1,18 @@
+{
+  "film": {
+    "fact_err": 0.05487532541155815,
+    "self_cf_gap": 0.016943883150815964,
+    "pred_validity": 0.0552385151386261,
+    "caf": 0.3067403249506345,
+    "extra": null
+  },
+  "ignore": {
+    "fact_err": 0.43215855956077576,
+    "self_cf_gap": 0.0,
+    "pred_validity": 0.43267345428466797,
+    "caf": 0.0,
+    "extra": null
+  },
+  "pass_separates": true,
+  "device": "cpu"
+}
