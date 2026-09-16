@@ -1,0 +1,17 @@
+{
+  "_purpose": "Seed replicates of the K3 memory axis only. The original sweep in train_zoo_spec.json trains one model per context length, which gives the Mem-Ctrl trend no error bars: the offline metrics are deterministic given a checkpoint, so re-running evaluation seeds cannot tell us whether the trend survives retraining. These replicates re-train the same five context lengths under two further seeds so the trend can be reported as a mean over three independent training runs per point.",
+  "_preregistered": "2026-09-01, added after the first memory sweep finished but BEFORE any replicate was trained. This adds statistical power to an already-registered axis; it introduces no new hypothesis and no new metric. All 10 models are reported.",
+  "_identical_to_originals_except_seed": "batch 20 and EPOCHS/2 are copied from train_zoo_spec.json so a replicate differs from its original in the seed alone.",
+  "models": [
+    {"name": "mem8_s1", "axis": "memory", "args": {"ctx-len": 8, "batch": 20, "epochs": "EPOCHS/2", "seed": 1}},
+    {"name": "mem8_s2", "axis": "memory", "args": {"ctx-len": 8, "batch": 20, "epochs": "EPOCHS/2", "seed": 2}},
+    {"name": "mem5_s1", "axis": "memory", "args": {"ctx-len": 5, "batch": 20, "epochs": "EPOCHS/2", "seed": 1}},
+    {"name": "mem5_s2", "axis": "memory", "args": {"ctx-len": 5, "batch": 20, "epochs": "EPOCHS/2", "seed": 2}},
+    {"name": "mem3_s1", "axis": "memory", "args": {"ctx-len": 3, "batch": 20, "epochs": "EPOCHS/2", "seed": 1}},
+    {"name": "mem3_s2", "axis": "memory", "args": {"ctx-len": 3, "batch": 20, "epochs": "EPOCHS/2", "seed": 2}},
+    {"name": "mem2_s1", "axis": "memory", "args": {"ctx-len": 2, "batch": 20, "epochs": "EPOCHS/2", "seed": 1}},
+    {"name": "mem2_s2", "axis": "memory", "args": {"ctx-len": 2, "batch": 20, "epochs": "EPOCHS/2", "seed": 2}},
+    {"name": "mem1_s1", "axis": "memory", "args": {"ctx-len": 1, "batch": 20, "epochs": "EPOCHS/2", "seed": 1}},
+    {"name": "mem1_s2", "axis": "memory", "args": {"ctx-len": 1, "batch": 20, "epochs": "EPOCHS/2", "seed": 2}}
+  ]
+}

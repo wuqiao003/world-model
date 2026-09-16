@@ -1,0 +1,11 @@
+{
+  "type": "StandardScaler",
+  "mean": [2.8098464099457487e-05, 7.310335786314681e-05],
+  "std": [0.0068019661121070385, 0.008502134121954441],
+  "feature_names": ["dx", "dy"],
+  "unit": "meters",
+  "note": "Per-tick Δ-EE in robot frame, XY only. Fitted from 72,307 ticks across 304 episodes of franka pusht teleop (decisive-style). std ≈ 7-9 mm typical, peak ≈ 45 mm.",
+  "n_samples": 72307,
+  "source_dataset": "Rongxuan-Zhou/pusht_lewm_fr3",
+  "dataset_revision": "2026-06"
+}

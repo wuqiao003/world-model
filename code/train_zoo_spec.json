@@ -1,0 +1,36 @@
+{
+  "_preregistered": "2026-09-01. Fixed BEFORE any model was trained or evaluated. Every listed model is reported in the paper regardless of its metric behaviour; none are dropped or added post hoc.",
+  "_epochs_placeholder": "EPOCHS is substituted by train_zoo.py from --epochs; short/vshort are fractions of it.",
+  "_axes": {
+    "seed": "independent draws of the same recipe -> lower bound on checkpoint-to-checkpoint variation",
+    "capacity": "encoder depth/width and predictor depth -> quality spectrum from architecture",
+    "budget": "epochs and data fraction -> quality spectrum from optimisation",
+    "regularisation": "SIGReg weight, incl. lam=0 which risks representation collapse",
+    "memory": "ctx_len sweep 1,2,3,5,8 -> the trained Mem-Ctrl axis K3 needs"
+  },
+  "_memory_axis_batch": "The mem* models share batch 20 and half the epoch budget, including their own ctx=3 point, because SIGReg is a batch statistic (it scales by proj.size(-2)): letting batch vary with ctx_len would confound memory capacity with regularisation strength. Larger ctx_len encodes more frames per sample, so batch 56 OOMs at ctx>=5 given the ~8 GB per card left by other tenants on this node. The sweep only needs to be internally comparable (it answers K3); the base_* models carry the reference budget.",
+  "_order": "Listed longest-running first so the scheduler starts mem8/mem5 in the first wave. Order affects scheduling only, never which models are reported.",
+  "models": [
+    {"name": "mem8",     "axis": "memory",         "args": {"ctx-len": 8, "batch": 20, "epochs": "EPOCHS/2"}},
+    {"name": "mem5",     "axis": "memory",         "args": {"ctx-len": 5, "batch": 20, "epochs": "EPOCHS/2"}},
+    {"name": "mem3",     "axis": "memory",         "args": {"ctx-len": 3, "batch": 20, "epochs": "EPOCHS/2"}},
+    {"name": "mem2",     "axis": "memory",         "args": {"ctx-len": 2, "batch": 20, "epochs": "EPOCHS/2"}},
+    {"name": "mem1",     "axis": "memory",         "args": {"ctx-len": 1, "batch": 20, "epochs": "EPOCHS/2"}},
+
+    {"name": "base_s0",  "axis": "seed",           "args": {"seed": 0}},
+    {"name": "base_s1",  "axis": "seed",           "args": {"seed": 1}},
+    {"name": "base_s2",  "axis": "seed",           "args": {"seed": 2}},
+
+    {"name": "lam0",     "axis": "regularisation", "args": {"lam": 0.0}},
+    {"name": "lam1",     "axis": "regularisation", "args": {"lam": 1.0}},
+    {"name": "lr_hi",    "axis": "regularisation", "args": {"lr": 0.003}},
+    {"name": "enc6",     "axis": "capacity",       "args": {"enc-layers": 6}},
+    {"name": "pred2",    "axis": "capacity",       "args": {"pred-depth": 2}},
+    {"name": "tiny",     "axis": "capacity",       "args": {"enc-hidden": 96, "enc-layers": 6, "pred-depth": 3, "pred-mlp": 512}},
+
+    {"name": "frac30",   "axis": "budget",         "args": {"frac": 0.30}},
+    {"name": "frac10",   "axis": "budget",         "args": {"frac": 0.10}},
+    {"name": "ep_short", "axis": "budget",         "args": {"epochs": "EPOCHS/4"}},
+    {"name": "ep_vshort","axis": "budget",         "args": {"epochs": "EPOCHS/12"}}
+  ]
+}
